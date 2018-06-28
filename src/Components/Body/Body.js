@@ -15,10 +15,7 @@ class Body extends Component {
     render() {
         return (
             <div className="Body">
-                <BodyHeader
-                    title = {this.getDefaultPropos().title1}
-                    text = {this.getDefaultPropos().text1}
-                />
+                <BodyHeader/>
                 <Blog
                     title = {this.getDefaultPropos().blog_title}
                 />

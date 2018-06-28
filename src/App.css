@@ -64,9 +64,32 @@
 */
 
 .Body{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0;
+}
+
+/*
+------------------------------------------------------------------
+                          Body-Header Styles
+------------------------------------------------------------------
+*/
+
+.BodyHeader{
+    position: relative;
+    padding: 20px 10px;
+    border: 3px solid pink;
+}
+
+.NameInput{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.NameInput label{
+    margin-right: 20px;
 }
 
 /*

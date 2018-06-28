@@ -1,49 +1,26 @@
 import React, { Component } from 'react';
 
 class BodyHeader extends Component {
-    //State is a condition that can influence on component
-    constructor(props){
-        super(props);
 
-        this.state = {
-            isOpen: false
-        }
-    }
+    state = {
+        username: ''
+    };
 
     render() {
-        const {isOpen} = this.state;
-        // const body = isOpen ? <p>{this.props.text}</p> : null;
         return (
-            <div className="Body-Header">
-                <h1>{this.props.title}</h1>
-                <button onClick={this.toggleOpen}>
-                    {isOpen ? 'hide' : 'show'}
-                </button>
-                {this.getBody()}
+            <div className="BodyHeader">
+                <div className="NameInput">
+                    <label>Name</label>
+                    <input type="text" value={this.state.username} onChange={this.handelUserChange}/>
+                </div>
             </div>
         );
     }
 
-    getBody(){
-        if (!this.state.isOpen) return null;
-        return (
-
-            <div>
-                <br/>
-                <hr/>
-                <br/>
-                {/*<span>{(new Date).toLocaleString()}</span>*/}
-                <p>{this.props.text}</p>
-            </div>
-
-        )
-
-    }
-
-    //Better practice is to use arrow functions
-    toggleOpen = () => {
+    handelUserChange = (ev) => {
+        if (ev.target.value.length > 10) return
         this.setState({
-            isOpen: !this.state.isOpen
+            username: ev.target.value
         })
     }
 

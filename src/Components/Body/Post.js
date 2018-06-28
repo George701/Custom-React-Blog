@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import CommentaryList from './Commentary/CommentaryList';
 
@@ -34,6 +34,7 @@ class Post extends PureComponent {
     //     return nextProps.isOpen !== this.props.isOpen;
     // }
     // PureComponent is making the same functionality of shouldComponentUpdate
+    // Use it only when you know, what is the problem and how to solve it
 
     render() {
         const {article} = this.props;
@@ -63,6 +64,7 @@ class Post extends PureComponent {
 
     getPost(){
         const {article, isOpen, toggleOpen} = this.props;
+        console.log('Post: ', 'update');
         if (!isOpen) {
             return (
                 <div onClick={toggleOpen}>

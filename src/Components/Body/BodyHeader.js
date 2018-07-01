@@ -27,7 +27,7 @@ class BodyHeader extends Component {
                     <input type="text" value={this.state.username} onChange={this.handelUserChange}/>
                 </div>
                 <div className="Select">
-                    <Select options = {options} value ={this.state.selection} onChange={this.changeSelection} multi/>
+                    <Select options = {options} value={this.state.selection} onChange={this.changeSelection} multi/>
                 </div>
             </div>
         );

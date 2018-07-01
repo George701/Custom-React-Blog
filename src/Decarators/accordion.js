@@ -6,11 +6,13 @@ export default (OriginalComponent) => class Accordion extends Component {
     };
 
     render(){
-        return <OriginalComponent
-            {...this.props}
-            {...this.state}
-            toggle = {this.handleToggle}
-        />
+        return (
+            <OriginalComponent
+                {...this.props}
+                {...this.state}
+                toggle = {this.handleToggle}
+            />
+        )
     }
 
     handleToggle = (id) => {

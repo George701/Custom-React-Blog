@@ -15,10 +15,6 @@ class Post extends PureComponent {
         toggleOpen: PropTypes.func
     };
 
-    // state = {
-    //   updateIndex: 0
-    // };
-
     componentWillReceiveProps(nextProps){
         // console.log('i: ', 'WillReceiveProps');
         // console.log('u: ', this.props.isOpen, nextProps.isOpen);

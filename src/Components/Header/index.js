@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Greeting from './Greeting-with-logo';
 import PropTypes from 'prop-types';
+import './Header.css';
 
-class Header extends Component {
+class Index extends Component {
     /*Props Comes From Parent*/
     getDefaultPropos(){
         return{
@@ -33,10 +34,10 @@ class Header extends Component {
 }
 
 // If content does not fulfill type, it will not be displayed
-Header.propTypes = {
+Index.propTypes = {
     // without defining title, page will not load
     // title: PropTypes.string.isRequired
     title: PropTypes.string
 };
 
-export default Header;
+export default Index;

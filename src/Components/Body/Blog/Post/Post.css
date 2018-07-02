@@ -1,0 +1,50 @@
+.Post{
+    margin: 10px;
+    background-color: #EEEE;
+    padding: 5px 10px;
+    border: 2px #DDD dashed;
+    border-radius: 10px;
+}
+
+.Post h3{
+    margin-bottom: 0;
+}
+
+.Post span{
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 10px;
+    color: #333;
+}
+
+.PostBody{
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-flex;
+    /*width: 75%;*/
+}
+
+.PostBody:hover{
+    cursor: pointer;
+    background-color: #CCC;
+    border-radius: 10px;
+}
+
+.imgContainer{
+    flex: 1;
+}
+
+.imgContainer img{
+    max-height: 100px;
+    position:relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #999999;
+    border-radius: 50%;
+}
+
+.TextContainer{
+    flex:2;
+    padding-left: 30px;
+}

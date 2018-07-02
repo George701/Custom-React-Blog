@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import CommentaryList from './Commentary/CommentaryList';
+import CommentaryList from '../Commentary/CommentaryList';
+import './Post.css';
 
 class Post extends PureComponent {
     // Dynamic check of types

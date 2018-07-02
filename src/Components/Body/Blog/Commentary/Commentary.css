@@ -1,0 +1,35 @@
+/*
+------------------------------------------------------------------
+                     CommentaryList Styles
+------------------------------------------------------------------
+*/
+
+.CommentaryList{
+    background-color: #DDD;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 3px #CCC double;
+
+}
+
+/*
+------------------------------------------------------------------
+                        Commentary Styles
+------------------------------------------------------------------
+*/
+
+.Commentary{
+    background-color: #EEEEEE;
+    padding: 1px 5px;
+    margin: 5px 0;
+    border: 2px #999 inset;
+    border-radius: 10px;
+}
+
+.Commentary h5{
+    margin-bottom: 0;
+}
+
+.noComments{
+    text-align: center;
+}

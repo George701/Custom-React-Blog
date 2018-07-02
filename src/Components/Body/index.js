@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import BodyHeader from './BodyHeader';
-import Blog from './Blog';
+import BodyHeader from './BodyHeader/index';
+import Blog from './Blog/index';
+import './Body.css';
 
 class Body extends Component {
     //Props Comes From Parent

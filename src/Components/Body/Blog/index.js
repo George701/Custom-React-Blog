@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Post from './Post';
+import Post from './Post/index';
 import PropTypes from 'prop-types'
 // import PostChart from './PostChart';
-import accordion from '../../Decarators/accordion';
-import articles from '../../API/articles';
+import accordion from '../../../Decarators/accordion';
+import articles from '../../../API/articles';
+import './Blog.css'
 
 class Blog extends Component {
 

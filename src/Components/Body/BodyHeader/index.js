@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import articles from '../../API/articles';
+import articles from '../../../API/articles';
 import PropTypes from 'prop-types'
 import 'react-select/dist/react-select.css';
+import './BodyHeader.css'
 
 class BodyHeader extends Component {
     static propTypes = {

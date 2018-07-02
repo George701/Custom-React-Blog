@@ -1,0 +1,12 @@
+.Blog{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+}
+
+.BlogPost{
+    flex:1;
+}

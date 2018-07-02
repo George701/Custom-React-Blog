@@ -1,0 +1,53 @@
+.App-header {
+    background-color: #aeaeae;
+    /*height: 150px;*/
+    padding: 60px 40px 20px 40px;
+}
+
+.App-header a img{
+    height: 80px;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+}
+
+.App-header h1{
+
+}
+
+.App-header span{
+    display: block;
+    padding: 0 40px;
+    overflow: hidden;
+    border-style: ridge;
+    border-width: 1px;
+    border-color: #333333;
+    box-shadow: 2px 2px #563D7C;
+}
+
+.App-header p a{
+    margin: 10px 0 0 0;
+    padding: 12px 7px;
+    border-radius: 10px;
+    box-shadow: 2px 2px #333333;
+    color: #FFFFFF;
+    background-color: #563D7C;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.App-header p a:hover{
+    background-color: #9b58da;
+    box-shadow: 2px 2px #555555;
+}
+
+.App-header p a:active,
+.App-header p a:visited{
+    background-color: #392851;
+
+}
+
+.Greeting{
+    display: inline-flex;
+}

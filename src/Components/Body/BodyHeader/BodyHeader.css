@@ -1,0 +1,23 @@
+.BodyHeader{
+    position: relative;
+    padding: 20px 10px;
+    border: 3px solid pink;
+}
+
+.NameInput{
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+    /*margin-bottom: 20px;*/
+    margin: 0 30px 10px 30px;
+    padding: 10px;
+    border-bottom: 1px #888 solid;
+}
+
+.NameInput label{
+    margin-right: 20px;
+}
+
+.Select{
+    margin: 0 15px;
+}

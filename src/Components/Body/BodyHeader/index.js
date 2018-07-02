@@ -3,7 +3,9 @@ import Select from 'react-select';
 import articles from '../../../API/articles';
 import PropTypes from 'prop-types'
 import 'react-select/dist/react-select.css';
-import './BodyHeader.css'
+import './BodyHeader.css';
+import DayPicker from './DayPicker/index';
+
 
 class BodyHeader extends Component {
     static propTypes = {
@@ -30,6 +32,7 @@ class BodyHeader extends Component {
                 <div className="Select">
                     <Select options = {options} value={this.state.selection} onChange={this.changeSelection} multi/>
                 </div>
+                <DayPicker/>
             </div>
         );
     }

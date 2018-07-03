@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import CommentaryList from '../Commentary/CommentaryList';
 import './Post.css';
+import Avatar from './Avatar/index';
 
 class Post extends PureComponent {
     // Dynamic check of types
@@ -66,9 +67,9 @@ class Post extends PureComponent {
             return (
                 <div onClick={toggleOpen}>
                     <div className="PostBody">
-                        <div className="imgContainer">
-                            <img src={article.image} alt="This is an placeholder"/>
-                        </div>
+                        <Avatar
+                            image = {article.image}
+                        />
                         <div className="TextContainer">
                             <h3>{article.title}</h3>
                             <p>{(article.text).split(" ", 20).join(" ")}...</p>
@@ -80,9 +81,9 @@ class Post extends PureComponent {
             return (
                 <div onClick={toggleOpen}>
                     <div className="PostBody">
-                        <div className="imgContainer">
-                            <img src={article.image} alt="This is an placeholder"/>
-                        </div>
+                        <Avatar
+                            image = {article.image}
+                        />
                         <div className="TextContainer">
                             <h3>{article.title}</h3>
                             <p>{article.text}</p>

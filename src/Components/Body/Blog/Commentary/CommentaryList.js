@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Commentary from './Commentary'
 import toggleOpen from '../../../../Decarators/toggleOpen';
 import './Commentary.css';
+import AddCommentary from './AddComentary/index';
 
 class CommentaryList extends Component {
 
@@ -28,7 +29,10 @@ class CommentaryList extends Component {
         if (!commentaries.length)
         {
             return (
-                <p className="noComments">There is no any commentaries.</p>
+                <div>
+                    <p className="noComments">There is no any commentaries.</p>
+                    <AddCommentary/>
+                </div>
             )
         }else{
             const commentElements = commentaries.map((commentary) =>
@@ -40,6 +44,7 @@ class CommentaryList extends Component {
             return (
                 <div>
                     {commentElements}
+                    <AddCommentary/>
                 </div>
             )
         }

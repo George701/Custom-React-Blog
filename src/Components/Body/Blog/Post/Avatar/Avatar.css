@@ -1,0 +1,12 @@
+.imgContainer{
+    flex: 1;
+}
+
+.imgContainer img{
+    max-height: 100px;
+    position:relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #999999;
+    border-radius: 50%;
+}

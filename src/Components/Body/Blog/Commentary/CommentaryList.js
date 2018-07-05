@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Commentary from './Commentary'
-import toggleOpen from '../../../../Decarators/toggleOpen';
+import toggleOpen from '../../../../decarators/toggleOpen';
 import './Commentary.css';
 import AddCommentary from './AddComentary/index';
 

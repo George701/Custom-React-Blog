@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import 'react-select/dist/react-select.css';
 import './BodyHeader.css';
 import DayPicker from './DayPicker/index';
+import Counter from './Counter/index';
 
 
 class BodyHeader extends Component {
@@ -33,6 +34,7 @@ class BodyHeader extends Component {
                     <Select options = {options} value={this.state.selection} onChange={this.changeSelection} multi/>
                 </div>
                 <DayPicker/>
+                <Counter/>
             </div>
         );
     }

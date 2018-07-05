@@ -22,11 +22,6 @@ class Counter extends Component{
         this.props.increment();
     }
 }
-function mapStateToProps(state){
-    return {
-        counter: state.count
-    }
-}
 export default connect((state) => ({
     counter: state.count
 }), {increment})(Counter);

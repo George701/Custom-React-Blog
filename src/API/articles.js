@@ -4,7 +4,7 @@ import img2 from '../Components/assets/img/img2.jpeg';
 import img3 from '../Components/assets/img/img3.jpeg';
 
 
-const articles = [
+export const articles = [
     {
         //Generating unique id
         "id": uuid(),

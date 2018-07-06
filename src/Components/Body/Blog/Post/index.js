@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import CommentaryList from '../Commentary/CommentaryList';
 import './Post.css';
 import Avatar from './Avatar/index';
+import {connect} from 'react-redux';
+import {deletePost} from '../../../../AC';
+import btnDelete from '../../../assets/img/delete.png';
 
 class Post extends PureComponent {
     // Dynamic check of types
@@ -39,11 +42,9 @@ class Post extends PureComponent {
         console.log('Post', 'update article');
         return (
             <div className="Post" ref={this.setContainerRef}>
-                {/*<button onClick={() => this.setState({updateIndex: this.state.updateIndex + 1})}>Update</button>*/}
                 {this.getPost()}
                 <CommentaryList
                     commentaries = {article.commentaries}
-                    // key = {this.state.updateIndex}
                 />
             </div>
         );
@@ -65,8 +66,9 @@ class Post extends PureComponent {
         console.log('Post: ', 'update');
         if (!isOpen) {
             return (
-                <div onClick={toggleOpen}>
-                    <div className="PostBody">
+                <div >
+                    <button className="btnDelete" onClick={this.handleDelete}><img src={btnDelete} alt="Delete"/></button>
+                    <div className="PostBody" onClick={toggleOpen}>
                         <Avatar
                             image = {article.image}
                         />
@@ -79,8 +81,9 @@ class Post extends PureComponent {
             )
         }else{
             return (
-                <div onClick={toggleOpen}>
-                    <div className="PostBody">
+                <div >
+                    <button className="btnDelete" onClick={this.handleDelete}><img src={btnDelete} alt="Delete"/></button>
+                    <div className="PostBody" onClick={toggleOpen}>
                         <Avatar
                             image = {article.image}
                         />
@@ -94,6 +97,12 @@ class Post extends PureComponent {
         }
     }
 
+    handleDelete = () => {
+        const {deletePost, article} = this.props;
+        deletePost(article.id);
+        console.log('---', 'delete');
+    }
+
 }
 
-export default Post;
+export default connect(null, { deletePost })(Post);

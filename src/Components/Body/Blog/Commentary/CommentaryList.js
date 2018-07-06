@@ -18,7 +18,7 @@ class CommentaryList extends Component {
                 <button onClick={toggleOpen}>
                     {isOpen ? 'hide' : 'show'}
                 </button>
-                    {this.getComments()}
+                {this.getComments()}
             </div>
         );
     }

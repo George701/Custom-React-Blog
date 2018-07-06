@@ -1,0 +1,1 @@
+Reducers are function that manipulate with 'store'. They can consist little parts. It can get action, react on them and return.

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Post from './Post/index';
 import PropTypes from 'prop-types'
-// import PostChart from './PostChart';
 import accordion from '../../../decarators/accordion';
 import articles from '../../../API/articles';
 import './Blog.css'
+import {connect} from 'react-redux';
 
 class Blog extends Component {
 
     static propTypes = {
-      articles: PropTypes.array.isRequired,
+      // from connect
+      articles: PropTypes.array,
       // Decorator: accordion
       openElementId: PropTypes.string,
       toggle: PropTypes.func.isRequired
@@ -33,9 +34,6 @@ class Blog extends Component {
 
                     {articleElements}
 
-                {/*<PostChart*/}
-                    {/*articles = {this.props.articles}*/}
-                {/*/>*/}
             </div>
         );
     }
@@ -44,4 +42,6 @@ class Blog extends Component {
 
 
 
-export default accordion(Blog);
+export default connect(state => ({
+    articles: state.articles
+}))(accordion(Blog));

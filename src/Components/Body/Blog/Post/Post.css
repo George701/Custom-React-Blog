@@ -35,3 +35,20 @@
     flex:2;
     padding-left: 30px;
 }
+
+/*
+------------------------------------------------------------------
+                      Delete button Styles
+------------------------------------------------------------------
+*/
+
+.btnDelete{
+    position: relative;
+    float:right;
+    border: none;
+    background: none;
+}
+
+.btnDelete img{
+    max-height: 30px;
+}

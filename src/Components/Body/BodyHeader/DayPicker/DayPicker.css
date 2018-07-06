@@ -15,7 +15,9 @@
 }
 
 .Range{
-    padding: 20px;
+    margin: 30px;
+    border: 1px solid #999999;
+    border-radius: 10px;
 }
 
 .Range p{

@@ -10,7 +10,7 @@ import Counter from './Counter/index';
 
 class BodyHeader extends Component {
     static propTypes = {
-        articles: PropTypes.array.isRequired
+        articles: PropTypes.array
     };
 
     state = {

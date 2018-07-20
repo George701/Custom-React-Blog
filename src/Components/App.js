@@ -18,7 +18,8 @@ class App extends Component {
               description = {this.getDefaultPropos().description}
               link = {this.getDefaultPropos().link}
           />
-          <Body />
+          <Body
+          />
       </div>
     );
   }

@@ -63,7 +63,7 @@ class Post extends PureComponent {
 
     getPost(){
         const {article, isOpen, toggleOpen} = this.props;
-        console.log('Post: ', 'update');
+        // console.log('Post: ', 'update');
         if (!isOpen) {
             return (
                 <div >
@@ -98,11 +98,11 @@ class Post extends PureComponent {
     }
 
     handleDelete = () => {
-        const {deletePost, article} = this.props;
+        const {article, deletePost} = this.props;
         deletePost(article.id);
         console.log('---', 'delete');
+        console.log('-id', article.id);
     }
-
 }
 
 export default connect(null, { deletePost })(Post);

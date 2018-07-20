@@ -8,4 +8,5 @@ export default (postState = defaultPosts, action) => {
         case DELETE_POST: return postState.filter(article => article.id !== payload.id);
         default: return postState;
     }
+
 }

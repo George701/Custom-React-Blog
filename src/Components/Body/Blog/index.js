@@ -4,19 +4,21 @@ import PropTypes from 'prop-types'
 import accordion from '../../../decarators/accordion';
 import './Blog.css'
 import {connect} from 'react-redux';
+import {filteredPostsSelector} from '../../../selectors/index';
 
 class Blog extends Component {
 
     static propTypes = {
       // from connect
-      articles: PropTypes.array,
+      articles: PropTypes.array.isRequired,
       // Decorator: accordion
       openElementId: PropTypes.string,
       toggle: PropTypes.func.isRequired
     };
 
     render() {
-
+        // after any manipulation will update render, because every connect will run shouldComponentUpdate
+        console.log('---', 'update post blog');
         const {openElementId, toggle, articles} = this.props;
         const articleElements = articles.map((article) =>
             <div key={article.id} className="BlogPost">
@@ -37,20 +39,12 @@ class Blog extends Component {
 
 }
 
-export default connect(({filters, posts}) => {
-    const {selected, dateRange: {from, to}} = filters;
 
-    const filteredPosts = posts.filter(article => {
-        const published = Date.parse(article.date);
-        return (!selected.length || selected.includes(article.id)) &&
-            (!from || !to || (published > from && published < to))
-    });
+export default connect((state) => {
+    // Uses shouldComponentUpdate
+
     return{
-       articles: filteredPosts
+       articles: filteredPostsSelector(state)
     }
 })(accordion(Blog));
 
-// export default connect(storage => ({
-//     articles: storage.posts
-//
-// }))(accordion(Blog));
